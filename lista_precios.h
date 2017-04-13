@@ -1,26 +1,32 @@
 #ifndef Lista_precios
+#include <iostream>
+#include <string.h>
 #define Lista_precios
+#include "access.h"
+#define ulista C:\Users\ARTURO\Desktop\Inventario\Inventario\BD\Lista de precios //poner ruta que se requiera cuando se descargue
 
+using namespace std;
 //NOTA: falta agregar los parametros para completar las funciones que estaran en el main
 
-class Lista_precios{
+class lista_precios{
 	
 	public:
-	char LIST_id[5];
-	char LIST_desc[20];
-	int LIST_moneda;
+	char list_id[5];
+	char list_desc[20];
+	int list_moneda;
 
-	
+	int i_lista_precios(){
+		string lista = (string)this->list_desc + "\t"+ (string)this->list_id "\t" + (string)this->list_moneda;
+		
+		
+	}
 	
 };
 
-FILE* List_precios_file;
-char* List_precios_file_name("Lista_precios.txt");
-  List_precios_file = fopen (List_precios_file_name,"w");
-  
-  //completar con la variables y parametros que se usen en el main
-  
-  fclose(List_precios_file);
+
+ 
+
+
   
   
 #endif
