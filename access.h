@@ -1,9 +1,11 @@
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+
 #ifndef ACCESS_H
 #define ACCESS_H
 
-#include <string>
-#include <stdio>
-#include <stdlib>
+using namespace std;
 
 //FUNCION PARA INSERTAR LINEAS DE TEXTO EN UN ARCHIVO TXT.
 /*
@@ -12,14 +14,15 @@
 	Retorno -> 1 : Exito insertando!
 			-> 0 : ocurrio un error insertado la data.  
  */
-int insert(char* filepath, char* data ) 
+int insert(char* filepath, string data ) 
 {
 	try
 	{
-		FILE* file = fopen(filepath,"w");
+		FILE* file = fopen(filepath,"a");
 		
 		fputs(data,file);
 		
+		fclose(file);
 		return 1;
 	}
 	catch () 
