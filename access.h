@@ -1,6 +1,5 @@
 #include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
+#include <iostream>
 
 #ifndef ACCESS_H
 #define ACCESS_H
@@ -18,16 +17,20 @@ int insert(char* filepath, string data )
 {
 	try
 	{
-		FILE* file = fopen(filepath,"a");
+		FILE* file = fopen(filepath,"a+");
 		
-		fputs(data,file);
-		
+		if (file == NULL) 
+		{
+			throw 0;
+		}
+		fputs((char*)data,file);
 		fclose(file);
+		
 		return 1;
 	}
-	catch () 
+	catch (int e) 
 	{
-		return 0;	
+		return e;	
 	}
 	
 	
