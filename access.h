@@ -1,5 +1,7 @@
 #include <string.h>
 #include <iostream>
+#include <fstream>
+#include <sstream>
 
 #ifndef ACCESS_H
 #define ACCESS_H
@@ -13,30 +15,33 @@ using namespace std;
 	Retorno -> 1 : Exito insertando!
 			-> 0 : ocurrio un error insertado la data.  
  */
-int insert(char* filepath, string data ) 
+int insert(string filepath, string data) 
 {
 	try
 	{
-		FILE* file = fopen(filepath,"a+");
+		ofstream file(filepath.c_str(), fstream::app);
 		
-		if (file == NULL) 
+		if (file.is_open()) 
 		{
+			file << data;
+			file.close();
+			
+		}
+		else {
 			throw 0;
 		}
-		fputs((char*)data,file);
-		fclose(file);
+		
 		
 		return 1;
 	}
 	catch (int e) 
 	{
-		return e;	
+		if (e == 0) {
+			cerr << "No se puedo abrir el archivo";
+			return e;
+		}
+			
 	}
-	
-	
-	
-	
-
 }
 
 

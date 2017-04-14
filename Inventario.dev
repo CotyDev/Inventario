@@ -24,12 +24,12 @@ HostApplication=
 UseCustomMakefile=0
 CustomMakefile=
 CommandLine=
-Folders=
+Folders="Capa Datos"
 IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=0
-CompilerSettings=0000000000000000000000000
-UnitCount=1
+CompilerSettings=0000000000000000001000000
+UnitCount=3
 
 [VersionInfo]
 Major=1
@@ -54,6 +54,26 @@ SyncProduct=1
 FileName=main.cpp
 CompileCpp=1
 Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit2]
+FileName=articulo.h
+CompileCpp=1
+Folder=Capa Datos
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit3]
+FileName=access.h
+CompileCpp=1
+Folder=Capa Datos
 Compile=1
 Link=1
 Priority=1000
