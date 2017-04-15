@@ -1,12 +1,10 @@
-#include <iostream>
-#include <string>
-#include <sstream>
 #include "access.h"
+#include <sstream>
 
 #ifndef ARTICULO_H
 #define ARTICULO_H
 
-const string uarticulo = "BD/articulo.txt";
+const string uarticulo = "BD/articulo.txt"; //constante con la ruta del archivo articulo.txt...
 
 using namespace std;
 
@@ -24,6 +22,7 @@ class data_articulo
 		double art_precio_ven; // precio de venta
 		double art_porc_sup; // porcentaje superior
 		double art_porc_inf; // porcentaje inferior
+		string plan_id;
    	public:
 		
 
@@ -32,13 +31,14 @@ class data_articulo
 			string art_id,
 			string art_desc,
 			string uni_id,
-			string cat_id, //
-			string prov_id, //ID del proveedor que suministra este articulo
-			string art_fecha_creacion, //CAMBIAR EL TIPO DE DATOS A UNO PARA MANEJO DE FECHAS... (BUSCAR LA LIB EN INTERNET)
+			string cat_id, 
+			string prov_id, 
+			string art_fecha_creacion,
 			double art_precio_adq,  
 			double art_precio_ven,
 			double art_porc_sup, 
-			double art_porc_inf 
+			double art_porc_inf,
+			string plan_id 
 		)
 		{
 			//Inicializando las variables de la clase...
@@ -52,37 +52,60 @@ class data_articulo
 			this->art_precio_ven = art_precio_ven;
 			this->art_porc_inf = art_porc_inf;
 			this->art_porc_sup = art_porc_sup;
+			this->plan_id = plan_id;
 		}
 		
 		
 		int i_articulo() 
 			{
-				//COMENTAR
-				//Crea una cadena con los datos organizados. 
 				
-				stringstream numeros;
-				string nums[4];
+				
+				
+				stringstream numeros; //Canal de string para almacenar los valores tipo numericos
+				string nums[4]; //arreglo de string para recibir los valores tipos numericos a traves del canal convertidos a string. 
 				 
-				numeros << this->art_precio_adq;
-				numeros >> nums[0];
+				numeros << "\t"<< this->art_precio_adq; //enviar al canal el valor de precio_adq
+				numeros >> nums[0]; //Llenar la variable en la primera posicion con precio_adq...
+				numeros.clear(); //limpiar el canal
+				
+				numeros << this->art_precio_ven; //enviar precio_ven
+				numeros >> nums[1]; //Llenar con precio_ven
+				numeros.clear(); //Limpiar el canal
+				 
+				numeros << this->art_porc_inf; //Enviar porc_inf
+				numeros >> nums[2]; //llenar con porc_inf
 				numeros.clear();
 				
-				numeros << this->art_precio_ven;
-				numeros >> nums[1];
+				numeros << this->art_porc_sup; //Envia porc_sup
+				numeros >> nums[3]; //Llenar con porc_sup
 				numeros.clear();
 				
-				numeros << this->art_porc_inf;
-				numeros >> nums[2];
-				numeros.clear();
-				
-				numeros << this->art_porc_sup;
-				numeros >> nums[3];
-				numeros.clear();
-				
+				//Crea una cadena con los datos organizados para ser guardados en el archivo...
 				string registro = this->art_id + "\t" + this->art_desc + "\t" + this->uni_id + "\t" + this->cat_id + 
-				"\t" + this->prov_id +"\t"+this->art_fecha_creacion +"\t"+ nums[0] +"\t"+ nums[1] +"\t"+ nums[2] +"\t"+ nums[3] + "\n";
+				"\t" + this->prov_id +"\t"+ this->plan_id + "\t" + this->art_fecha_creacion + "\t"  + nums[0] +"\t"+ 
+				nums[1] +"\t"+ nums[2] +"\t"+ nums[3] + "\n";
 				
-				insert(uarticulo,registro);
+				//inserta los registros en el archivo de articulo.txt
+				insert(uarticulo,registro); //	'uarticulo' almacena un string con la ruta del archivo.
+			}
+			/*
+				@resumen busca el registro que corresponde al id del articulo inicializado.
+				@param no acepta parametros
+				
+				@return retorna un string de una sola linea que contiene los datos de todos los campos separados por tabs
+				@nota los datos se entregan totalmente planos para que sean manipulados despues...
+				el id del articulo es publico por tanto para consultar un articula a traves de esta funcion, solo hay que cambiar el id. 
+				
+			*/
+			
+			string s_articulo() 
+			{
+				string s; //string que se piensa retornar
+				s  = select(uarticulo, this->art_id); //se utiliza la funcion de access.h select para buscar el registro.
+				
+				 
+				
+				return s; //se retorna el registro...
 			}
 };	
 	
