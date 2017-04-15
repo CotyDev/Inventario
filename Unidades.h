@@ -1,10 +1,37 @@
-#ifndef Unidades
+#include <iostream>
+#include <string>
+#include <sstream>
+#include "access.h"
 
-class Unidades {
+#ifndef UNIDADES_H
+#define UNIDADES_H
+
+const string uunidades = "BD/unidades.txt";
+class data_unidades {
 	public:
-	char UNI_id[5];
-	char UNI_desc[20];
-	char UNI_etiqueta[20];			
+	string uni_id;
+	string uni_descr;
+	string uni_etiqueta;
+	public:
+		//Declaracion del Constructor 
+	data_unidades 
+	(
+		string uni_id,
+		string uni_descr,
+		string uni_etiqueta
+	)
+	{
+		this->uni_id = uni_id;
+		this->uni_descr = uni_descr;
+		this->uni_etiqueta = uni_etiqueta; 
+			
+	}
+	int i_unidades()
+	{
+		string registro = this->uni_id + "\t" + this->uni_descr + "\t" + this->uni_etiqueta;
+		insert(uunidades,registro);
+	}
+				
 };
 
 

@@ -1,10 +1,41 @@
-#ifndef Categoria
 
+#include "access.h"
+#include <iostream>
+#include <string>
+#include <sstream>
 
-class Categoria{
+#ifndef CATEGORIA_H
+#define CATEGORIA_H
+using namespace std;
+
+const string ucategoria = "BD/categoria.txt";
+
+class data_categoria{
 	public:
-		char CAT_id[5];
-		char CAT_desc[20];
-}
+		string cat_id;
+		string cat_descr;	
+	public:
+		//Constructor de la clase
+		
+		data_categoria
+		(
+		string cat_id,
+		string cat_descr
+		)
+		
+		{
+			//Inicializacion de las clases
+			this->cat_id = cat_id;
+			this->cat_descr = cat_descr;	
+		}
+		int i_categoria()
+		{
+			string registro = this->cat_id + "\t" + this->cat_descr;
+			
+			insert(ucategoria,registro);
+		}
+				
+};
+
 
 #endif
