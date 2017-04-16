@@ -38,20 +38,21 @@ class data_proveedores{
 		this->prov_id = prov_id;
 		this->prov_tel1 = prov_tel1;
 		this->prov_tel2 = prov_tel2;
+
 		
 			}	
 			
-			int i_proveedores(){
+			int i_proveedores(){			//metodo de insertar
 				
 			
 				stringstream telefono;
 				string tel[2];
 				
-				telefono<< this.prov_tel1;
+				telefono<< this->prov_tel1;
 				telefono>>tel[0];
 				telefono.clear();
 				
-				telefono<<this.prov_tel2;
+				telefono<<this->prov_tel2;
 				telefono>>tel[1];
 				telefono.clear();
 				
