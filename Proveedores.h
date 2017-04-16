@@ -56,7 +56,7 @@ class data_proveedores{
 				telefono>>tel[1];
 				telefono.clear();
 				
-			string proveedores = this->list_id + "\t" + this->prov_desc + "\t" + this->prov_email +
+			string registro = this->list_id + "\t" + this->prov_desc + "\t" + this->prov_email +
 			"\t" + this.prov_id + "\t" + tel[0]	+ "\t" + tel[1] + "\n";
 			
 			insert(uproveedores,registro);
