@@ -1,51 +1,80 @@
-#ifndef Menu
-#define Menu
+#include <iostream>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 
+#ifndef MENU_H
+#define MENU_H
+
+using namespace std;
 //esquema del menu
 
 
 cout<<"MENU \n"
 
-<<"1. Opciones de articulo\n"
-<<"A1. Consultar \n"
-<<"A2. Insertar \n"
+<<"Opciones de articulo\n\t"
+<<"A1. Consultar \n\t"
+<<"A2. Insertar \n\t"
  
-<<"2. Opciones de proveedor \n"
-<<"P1. Consultar\n"
-<<"P2. Insertar"
+<<"Opciones de proveedor \n\t"
+<<"P1. Consultar\n\t"
+<<"P2. Insertar\n\t"
  
-<<"3.Opciones de plan de medida\n"
-<<"U1. consultar"
-<<"U2. Insertar"
+<<"Opciones de plan de medida\n\t"
+<<"U1. consultar\n\t"
+<<"U2. Insertar\n\t"
 
-<<"4. Opciones de categoria \n"
-<<"C1. Consultar"
-<<"C2. Insertar"
+<<"Opciones de categoria \n\t"
+<<"C1. Consultar\n\t"
+<<"C2. Insertar\n\t"
  
-<<"5. Opciones lista de precios\n" 
-<<"L1. Consultar"
-<<"L2. Insertar"
+<<"Opciones lista de precios\n\t" 
+<<"L1. Consultar\n\t"
+<<"L2. Insertar\n\t"
 
-<<"6. Reportes\n"
-<<"R1. Reporte de conteo fisico"
-<<"R2. Reporte de variacion de existencias"
-<<"R3. Reporte de ajuste de inventario"
-<<"R4. Lista de articulos"
-<<"R5. Lista de proveedores"
-<<"R6. Lista de Listas de precios"
-<<"R7. Lista de Categorias"
-<<"R8. Lista de plan de unidades de medida"
+<<"Reportes\n\t"
+<<"R1. Reporte de conteo fisico\n\t"
+<<"R2. Reporte de variacion de existencias\n\t"
+<<"R3. Reporte de ajuste de inventario\n\t"
+<<"R4. Lista de Listas de precios\n\t"
 
-int opc=0;
+
+string opc=0;
 
 
 
 switch(opc){			//completar logica con funciones de inserccion y consulta
 	
-	case 1:
-		
-		cout<<"funciones de insertar";
-	
+	case "A1":
+		break;
+	case "A2":
+		break;
+	case "P1":
+		break;
+	case "P2":
+		break;
+	case "U1":
+		break;
+	case "U2":
+		break;
+	case "C1":
+		 break;
+	case "C2":
+		break;
+	case "L1":
+		break;
+	case "L2":
+		break;
+	case "R1":
+		break;
+	case "R2":
+		break;
+	case "R3":
+		break;
+	case "R4":
+		break;
+	default:
+		break;
 }
 
 
