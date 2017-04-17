@@ -8,8 +8,7 @@
 
 
 
-const string uproveedores = "BD/proveedores.txt" //ubicacion del archivo del proveedor
-
+const string uproveedores = "BD/proveedores.txt"; //ubicacion del archivo del proveedor...
 using namespace std;
 
 class data_proveedores{
@@ -30,7 +29,7 @@ class data_proveedores{
 	string list_id,
 	string prov_email,
 	int prov_tel1,
-	int prov_tel2,)	{								//iniciando metodo constructor
+	int prov_tel2)	{								//iniciando metodo constructor
 		
 		this->list_id = list_id;
 		this->prov_desc = prov_desc;
@@ -57,7 +56,7 @@ class data_proveedores{
 				telefono.clear();
 				
 			string registro = this->list_id + "\t" + this->prov_desc + "\t" + this->prov_email +
-			"\t" + this.prov_id + "\t" + tel[0]	+ "\t" + tel[1] + "\n";
+			"\t" + this->prov_id + "\t" + tel[0]	+ "\t" + tel[1] + "\n";
 			
 			insert(uproveedores,registro);
 				
