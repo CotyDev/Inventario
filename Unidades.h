@@ -30,6 +30,14 @@ class data_unidades {
 	{
 		string registro = this->uni_id + "\t" + this->uni_descr + "\t" + this->uni_etiqueta;
 		insert(uunidades,registro);
+		return 1;
+	}
+	
+	string s_unidades()
+	{
+		string s;
+		s = select(uunidades,this->uni_id);
+		return s;
 	}
 				
 };

@@ -33,9 +33,16 @@ class data_categoria{
 			string registro = this->cat_id + "\t" + this->cat_descr;
 			
 			insert(ucategoria,registro);
+			return 1;
 		}
-				
+		string s_categoria()
+		{
+			string s;
+			s = select(ucategoria,this->cat_id);
+			return s;
+		}		
 };
+
 
 
 #endif

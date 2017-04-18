@@ -40,9 +40,18 @@ class data_plan_unidad {
 		numero >> num[0];
 		numero.clear();
 		
+	
 		string registro = this->plan_id + "\t" + this->plan_etiqueta + "\t"+ this->plan_unidad + "\t" + num[0];
 		insert(uplan,registro);
-	}		
+		return 1;
+	}	
+	
+	string s_plan()
+		{
+			string s;
+			s = select(uplan,this->plan_id);
+			return s;
+		}			
 };
 
 #endif
