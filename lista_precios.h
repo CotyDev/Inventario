@@ -1,11 +1,14 @@
-#include <iostream>
 #include <string.h>
+#include <iostream>
+#include <fstream>
+#include <stdlib.h>
 #include "access.h"
 
 #ifndef Lista_precios
 #define Lista_precios
 
-const string ulista_precios = "BD/articulo.txt";
+
+const string ulista_precios = "BD/lista_precio.txt";
 
 using namespace std;
 
@@ -15,11 +18,11 @@ class data_lista_precios{
 	public:
 	string list_id;
 	string list_desc;
-	int list_moneda;
+	string list_moneda;
 	
 	public:
 		
-		data_lista_precios(string list_id,
+		data_lista_precios (string list_id,
 	string list_desc,
 	int list_moneda){
 		
