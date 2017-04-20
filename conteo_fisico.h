@@ -9,7 +9,7 @@
 
 //agregar funcion que retorne arreglo de la descripcion
 
-const string uconteo_fisico = "BD/articulo.txt";
+const string uconteo_fisico = "BD/conteo_fisico.txt";
 
 using namespace std;
 
