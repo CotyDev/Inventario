@@ -24,12 +24,12 @@ HostApplication=
 UseCustomMakefile=0
 CustomMakefile=
 CommandLine=
-Folders="Capa Datos","Capa Validaciones",util
+Folders=BD,"Capa Datos","Capa Validaciones",util
 IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=0
 CompilerSettings=0000000000000000001000000
-UnitCount=15
+UnitCount=13
 
 [VersionInfo]
 Major=1
@@ -73,7 +73,7 @@ BuildCmd=
 [Unit3]
 FileName=access.h
 CompileCpp=1
-Folder=Capa Datos
+Folder=util
 Compile=1
 Link=1
 Priority=1000
@@ -81,35 +81,16 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit4]
-FileName=BD\articulo.txt
-Folder=Capa Datos
-Compile=0
-Link=0
+FileName=Menu.h
+Folder=util
+Compile=1
+Link=1
 Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
+CompileCpp=1
 
 [Unit5]
-FileName=util.h
-CompileCpp=1
-Folder=util
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
-[Unit6]
-FileName=Menu.h
-CompileCpp=1
-Folder=util
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
-[Unit7]
 FileName=v_articulo.h
 CompileCpp=1
 Folder=Capa Validaciones
@@ -119,7 +100,7 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit8]
+[Unit6]
 FileName=v_Categoria.h
 CompileCpp=1
 Folder=Capa Validaciones
@@ -129,7 +110,7 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit9]
+[Unit7]
 FileName=Categoria.h
 CompileCpp=1
 Folder=Capa Datos
@@ -139,25 +120,7 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit10]
-FileName=BD\categoria.txt
-Folder=Capa Datos
-Compile=0
-Link=0
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
-[Unit11]
-FileName=BD\categoria_auxiliar.txt
-Folder=Capa Datos
-Compile=0
-Link=0
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
-[Unit12]
+[Unit8]
 FileName=v_plan_unidad.h
 CompileCpp=1
 Folder=Capa Validaciones
@@ -167,10 +130,50 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit13]
+[Unit9]
 FileName=Plan_Unidad.h
 CompileCpp=1
 Folder=Capa Datos
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit10]
+FileName=Proveedores.h
+Folder=Capa Datos
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+CompileCpp=1
+
+[Unit11]
+FileName=Unidades.h
+Folder=Capa Datos
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+CompileCpp=1
+
+[Unit12]
+FileName=v_proveedores.h
+CompileCpp=1
+Folder=Capa Validaciones
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit13]
+FileName=v_unidades.h
+CompileCpp=1
+Folder=Capa Validaciones
 Compile=1
 Link=1
 Priority=1000
