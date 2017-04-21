@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
+#include "articulo.h"
 
 #ifndef MENU_H
 #define MENU_H
