@@ -24,12 +24,12 @@ HostApplication=
 UseCustomMakefile=0
 CustomMakefile=
 CommandLine=
-Folders="Capa Datos"
+Folders="Capa Datos","Capa Validaciones",util
 IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=0
 CompilerSettings=0000000000000000001000000
-UnitCount=3
+UnitCount=15
 
 [VersionInfo]
 Major=1
@@ -76,6 +76,121 @@ CompileCpp=1
 Folder=Capa Datos
 Compile=1
 Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit4]
+FileName=BD\articulo.txt
+Folder=Capa Datos
+Compile=0
+Link=0
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit5]
+FileName=util.h
+CompileCpp=1
+Folder=util
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit6]
+FileName=Menu.h
+CompileCpp=1
+Folder=util
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit7]
+FileName=v_articulo.h
+CompileCpp=1
+Folder=Capa Validaciones
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit8]
+FileName=v_Categoria.h
+CompileCpp=1
+Folder=Capa Validaciones
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit9]
+FileName=Categoria.h
+CompileCpp=1
+Folder=Capa Datos
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit10]
+FileName=BD\categoria.txt
+Folder=Capa Datos
+Compile=0
+Link=0
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit11]
+FileName=BD\categoria_auxiliar.txt
+Folder=Capa Datos
+Compile=0
+Link=0
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit12]
+FileName=v_plan_unidad.h
+CompileCpp=1
+Folder=Capa Validaciones
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit13]
+FileName=Plan_Unidad.h
+CompileCpp=1
+Folder=Capa Datos
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit14]
+FileName=BD\plan.txt
+Folder=Capa Datos
+Compile=0
+Link=0
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit15]
+FileName=BD\plan_auxiliar.txt
+Folder=Capa Datos
+Compile=0
+Link=0
 Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
