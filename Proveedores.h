@@ -19,8 +19,8 @@ class data_proveedores{
 	string prov_desc;
 	string list_id;
 	string prov_email;
-	int prov_tel1;
-	int prov_tel2;
+	string prov_tel1;
+	string prov_tel2;
 	
 	public:
 					
@@ -29,8 +29,8 @@ class data_proveedores{
 	string prov_desc,
 	string list_id,
 	string prov_email,
-	int prov_tel1,
-	int prov_tel2)	{								//iniciando metodo constructor
+	string prov_tel1,
+	string prov_tel2)	{								//iniciando metodo constructor
 		
 		this->list_id = list_id;
 		this->prov_desc = prov_desc;
@@ -45,19 +45,20 @@ class data_proveedores{
 			int i_proveedores(){			//metodo de insertar
 				
 			
-				stringstream telefono;
-				string tel[2];
+				//stringstream telefono;
+				//string tel[2];
 				
-				telefono<< this->prov_tel1;
-				telefono>>tel[0];
-				telefono.clear();
+				//telefono<< this->prov_tel1;
+				//telefono>>tel[0];
+				//telefono.clear();
 				
-				telefono<<this->prov_tel2;
-				telefono>>tel[1];
-				telefono.clear();
+				//telefono<<this->prov_tel2;
+				//telefono>>tel[1];
+				//telefono.clear();
+				//"+\t" + this->prov_id + "\t" + tel[0]	+ "\t" + tel[1] + "\n"
 				
-			string registro = this->list_id + "\t" + this->prov_desc + "\t" + this->prov_email +
-			"\t" + this->prov_id + "\t" + tel[0]	+ "\t" + tel[1] + "\n";
+			string registro = this->prov_id + "\t" +  this->prov_desc + "\t" + this->list_id + "\t" + this->prov_email + "\t" +this->prov_tel1 + "\t" + this->prov_tel2;
+			
 			
 			string registro2 = this->prov_desc + "\n";
 			
