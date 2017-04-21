@@ -41,7 +41,7 @@ class data_plan_unidad {
 		numero.clear();
 		
 	
-		string registro = this->plan_id + "\t" + this->plan_etiqueta + "\t"+ this->plan_unidad + "\t" + num[0];
+		string registro = this->plan_id + "\t" + this->plan_etiqueta + "\t"+ this->plan_unidad + "\t" + num[0] + "\n";
 		insert(uplan,registro);
 		return 1;
 	}	

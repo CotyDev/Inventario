@@ -30,8 +30,9 @@ class data_categoria{
 		}
 		int i_categoria()
 		{
-			string registro = this->cat_id + "\t" + this->cat_descr;
-			
+			string registro = this->cat_id + "\t" + this->cat_descr + "\n";
+			string registro2 = this->cat_descr;
+			//insert(ucategoria,registro2);
 			insert(ucategoria,registro);
 			return 1;
 		}

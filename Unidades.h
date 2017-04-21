@@ -28,7 +28,7 @@ class data_unidades {
 	}
 	int i_unidades()
 	{
-		string registro = this->uni_id + "\t" + this->uni_descr + "\t" + this->uni_etiqueta;
+		string registro = this->uni_id + "\t" + this->uni_descr + "\t" + this->uni_etiqueta + "\n";
 		insert(uunidades,registro);
 		return 1;
 	}
