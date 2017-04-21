@@ -8,6 +8,8 @@
 
 
 const string uplan = "BD/plan.txt";
+const string uaplan = "BD/plan_auxiliar.txt";
+
 using namespace std;
 
 class data_plan_unidad {
@@ -42,7 +44,9 @@ class data_plan_unidad {
 		
 	
 		string registro = this->plan_id + "\t" + this->plan_etiqueta + "\t"+ this->plan_unidad + "\t" + num[0] + "\n";
+		string registro2 = this->plan_etiqueta + "\n";
 		insert(uplan,registro);
+		insert(uaplan,registro2);
 		return 1;
 	}	
 	

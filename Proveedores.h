@@ -9,6 +9,7 @@
 
 
 const string uproveedores = "BD/proveedores.txt"; //ubicacion del archivo del proveedor...
+const string uaproveedores = "BD/proveedores_auxiliar.txt";
 using namespace std;
 
 class data_proveedores{
@@ -58,21 +59,21 @@ class data_proveedores{
 			string registro = this->list_id + "\t" + this->prov_desc + "\t" + this->prov_email +
 			"\t" + this->prov_id + "\t" + tel[0]	+ "\t" + tel[1] + "\n";
 			
+			string registro2 = this->prov_desc + "\n";
+			
 			insert(uproveedores,registro);
+			insert(uaproveedores,registro2);
 				
 				
 				
 			}		
 		
-		
-		
-	
-	
+		string s_proveedores()
+		{
+			string s;
+			s = select(uproveedores,this->prov_id);
+			return s;
+		}			
 };
 
-
-  
-
-  
-  
 #endif

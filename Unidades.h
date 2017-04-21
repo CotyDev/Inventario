@@ -7,6 +7,7 @@
 #define UNIDADES_H
 
 const string uunidades = "BD/unidades.txt";
+const string uaunidades = "BD/unidades_auxiliar.txt";
 class data_unidades {
 	public:
 	string uni_id;
@@ -29,7 +30,11 @@ class data_unidades {
 	int i_unidades()
 	{
 		string registro = this->uni_id + "\t" + this->uni_descr + "\t" + this->uni_etiqueta + "\n";
+		string registro2 = this->uni_descr + "\n";
 		insert(uunidades,registro);
+		insert(uaunidades,registro2);
+		
+		
 		return 1;
 	}
 	
@@ -41,6 +46,5 @@ class data_unidades {
 	}
 				
 };
-
 
 #endif

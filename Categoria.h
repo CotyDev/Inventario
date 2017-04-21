@@ -9,6 +9,7 @@
 using namespace std;
 
 const string ucategoria = "BD/categoria.txt";
+const string uacategoria = "BD/categoria_auxiliar.txt";
 
 class data_categoria{
 	public:
@@ -34,6 +35,7 @@ class data_categoria{
 			string registro2 = this->cat_descr;
 			//insert(ucategoria,registro2);
 			insert(ucategoria,registro);
+			insert(uacategoria,registro2);
 			return 1;
 		}
 		string s_categoria()
