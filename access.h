@@ -60,7 +60,7 @@ string select(string filepath, string id)
 	
 	if (!file.is_open())
 	{
-		cerr << "Ha ocurrido un error abriendo el archivo!";
+		cerr << "Ha ocurrido un error abriendo el archivo! \n";
 		return "Error";
 	}
 	char* s = (char*)malloc(sizeof(char)*128); //retenedor de informacion...

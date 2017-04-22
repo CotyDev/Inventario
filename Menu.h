@@ -23,6 +23,7 @@ void menu(){
 	v_categoria cat;
 	v_unidades uni;
 	v_lista_precios lpre;
+	ofstream rpt("BD/rpt_articulo.txt");
 	//data_conteo_fisico conf;
 
 int opc = 0;
@@ -55,8 +56,14 @@ while (opc != 99) {
 	<<"52 Insertar\n\t"
 	
 	<<"Reportes\n\t"
-	<<"61 Lista de Articulos\n\n"
+	<<"61 Lista de Articulos\n\t"
+	
+	<<"Unidades\n\t"
+	<<"71 Consultar\n\t"
+	<<"72 Insertar \n\n"
+	
 	<<"99 SALIR\n\n\n";
+	
 
 	cout << "Elija una opcion: ";
 	cin >> opc;
@@ -128,11 +135,23 @@ while (opc != 99) {
 		case 61:
 			system("cls");
 			cout << "ID   \t" << "Descripcion" << mulstr(" ", 9) << "\tUnidad" << mulstr(" ",14) << "\tCategoria" << mulstr(" ", 11) << "\tProveedor" 
-			<< mulstr(" ",11) << "\tPlan"<<mulstr(" ",16)<<"\tFecha de creacion   \t"<< "\n";			
+			<< mulstr(" ",11) << "\tPlan"<<mulstr(" ",16)<<"\tFecha     \t"<< "costo\t" << "venta\t" << "p_inf\t" << "p_sup\t"  << "stock" <<"\n";			
 			reporte(uarticulo);
+			
+			
+			system("pause");
+			
+			break;
+		case 71:
+			system("cls");
+			cout << uni.s_unidades();
 			system("pause");
 			break;
-
+		case 72:
+			system("cls");
+			cout << uni.i_unidades();
+			system("pause");
+			break;
 		case 99:
 			break;
 		default:
