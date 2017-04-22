@@ -94,5 +94,62 @@ string select(string filepath, string id)
 	return data; //retorna el string
 }
 
+int mostrar(string filepath)
+{
+	ifstream file(filepath.c_str());//Abriendo para lectura...
+	string data;
+	int opc = 99;
+	int i = 1;
+	
+	if(file.bad())
+	{
+		cerr << "ERROR: Problemas abriendo el arhivo";
+	}
+	
+	while (!file.eof()) 
+	{
+		getline(file,data);
+		cout << i << ". " << data << "\n";
+		i++;
+	}
+	
+	cout << "Elige una opcion: ";
+	cin >> opc;
+	
+	return opc;
+	
+	file.close();
+}
+
+string obtener(string filepath, int l) 
+{
+	ifstream file(filepath.c_str());
+	string data;
+	string g;
+	if (file.is_open()) 
+	{
+		
+		
+		for(int i = 1; i < l; i++)
+		{
+			file >> g;
+			
+		}
+		
+		if (file.good()) 
+		{
+			file >> data;
+			
+		}
+		else 
+		{
+			data = "Error";
+		}
+	}
+	
+	file.close();
+	
+	return data;
+}
 #endif
 

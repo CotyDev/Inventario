@@ -13,7 +13,7 @@ using namespace std;
 const string uni_aux = "BD/unidades_auxiliar.txt";
 const string plan_aux = "BD/plan_auxiliar.txt";
 const string cat_aux = "BD/categoria_auxiliar.txt";
-const string prov_aux = "BD/proveedores_axiliar.txt";
+const string prov_aux = "BD/proveedores_auxiliar.txt";
 
 class v_articulo 
 {
@@ -67,30 +67,69 @@ class v_articulo
 				if (this->art_fecha_creacion.length() != 10) { cerr <<"ERROR: La fecha debe tener longitud 10";}
 			}while(this->art_fecha_creacion.length() != 10);
 			
-
-			/*
+			//Unidad
+			int  control = 0;
 			do{
+				cout << "Unidades: \n";
+				int opc = mostrar(uni_aux);
 				
-				cout <<"Selecciona una unidad...";
-				/*
-					@pendiente: se debe desplegar una lista de las opciones para seleccion de unidades...
-				
-				
-				int  control = 0;
-				int opc = 0;
-				switch(opc)
+				if (obtener(uni_aux, opc) != "Error") 
 				{
-					case 1:
-					
-					case n:
-						//code
-					default:
-						//code
-				} 
-			
-			}while(control == 0); */
+					this->uni_id = obtener(uni_aux, opc);
+					control = 1;
+				}
+				
 				
 			
+			}while(control != 1);
+			
+			//Proveedor
+			control = 0;
+			do{
+				cout << "Proveedores: \n";
+				int opc = mostrar(prov_aux);
+				
+				if (obtener(prov_aux, opc) != "Error") 
+				{
+					this->prov_id = obtener(prov_aux, opc);
+					control = 1;
+				}
+				
+				
+			
+			}while(control != 1);
+				
+			//Categoria
+			control = 0;
+			do{
+				cout << "Categorias: \n";
+				int opc = mostrar(cat_aux);
+				
+				if (obtener(cat_aux, opc) != "Error") 
+				{
+					this->cat_id = obtener(cat_aux, opc);
+					control = 1;
+				}
+				
+				
+			
+			}while(control != 1);	
+			
+			//Plan
+			control = 0;
+			do{
+				cout << "Planes de unidad: \n";
+				int opc = mostrar(plan_aux);
+				
+				if (obtener(plan_aux, opc) != "Error") 
+				{
+					this->prov_id = obtener(plan_aux, opc);
+					control = 1;
+				}
+				
+				
+			
+			}while(control != 1);
 			
 				
 			cout << "Introduzca el precio de adquisicion: ";
