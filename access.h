@@ -110,7 +110,7 @@ int mostrar(string filepath)
 	while (!file.eof() && file.good()) 
 	{
 		getline(file,data);
-		if (data != "\n") 
+		if (data != "") 
 		{
 			cout << i << ". " << data << "\n";
 			i++;

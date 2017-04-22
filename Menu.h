@@ -145,7 +145,7 @@ while (opc != 99) {
 			break;
 		case 64:
 			system("cls");
-			cout << "\n";
+			cout << mostrar(ulista_precios);
 			system("pause");
 			break;
 		case 99:

@@ -183,7 +183,7 @@ class v_articulo
 			
 			
 			do {
-				cout << "Existencias: " << "\n";
+				cout << "Existencias: ";
 				cin >> this->cont_sistema;
 				if (this->cont_sistema <= 0) {cerr << "ERROR: debe ser mayor que 0";}
 			}while(this->cont_sistema <= 0);
