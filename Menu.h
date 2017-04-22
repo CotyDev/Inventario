@@ -58,7 +58,8 @@ while (opc != 99) {
 	<<"61 Reporte de conteo fisico\n\t"
 	<<"62 Reporte de variacion de existencias\n\t"
 	<<"63 Reporte de ajuste de inventario\n\t"
-	<<"64 Lista de Listas de precios\n\n";
+	<<"64 Lista de Listas de precios\n\n"
+	<<"99 SALIR\n\n\n";
 
 	cout << "Elija una opcion: ";
 	cin >> opc;
@@ -81,6 +82,7 @@ while (opc != 99) {
 		case 21:
 			system("cls");
 			cout << "\n" << prov.s_proveedores();
+			system("pause");
 			
 			break;
 		case 22:
@@ -133,19 +135,24 @@ while (opc != 99) {
 			break;
 		case 62:
 			system("cls");
-			cout << "\n" <<
+			cout << "\n";
 			system("pause");
 			break;
 		case 63:
 			system("cls");
-			cout << "\n" <<
+			cout << "\n";
 			system("pause");
 			break;
 		case 64:
 			system("cls");
-			cout << "\n" <<
+			cout << "\n";
 			system("pause");
 			break;
+		case 99:
+			
+			cout << "salio";
+			system("pause");
+			
 		default:
 			cerr << "Elija una opcion valida";
 			break;

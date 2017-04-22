@@ -110,8 +110,11 @@ int mostrar(string filepath)
 	while (!file.eof() && file.good()) 
 	{
 		getline(file,data);
-		cout << i << ". " << data << "\n";
-		i++;
+		if (data != "\n") 
+		{
+			cout << i << ". " << data << "\n";
+			i++;
+		}
 	}
 	
 	cout << "Elige una opcion: ";

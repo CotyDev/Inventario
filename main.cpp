@@ -6,8 +6,9 @@ using namespace std;
 int main(int argc, char** argv) 
 {
 	
-	menu();
+	//menu();
 	
+	system("pause");
 	return 0;
 }
 

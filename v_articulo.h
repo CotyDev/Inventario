@@ -138,7 +138,7 @@ class v_articulo
 				
 				if (obtener(plan_aux, opc) != "Error") 
 				{
-					this->prov_id = obtener(plan_aux, opc);
+					this->plan_id = obtener(plan_aux, opc);
 					control = 1;
 				}
 				else 
@@ -159,7 +159,7 @@ class v_articulo
 				
 				cout << "Introduzca el precio de venta: ";
 				cin >> this->art_precio_ven;
-				if (art_precio_ven < art_precio_adq) {cerr <<"ERROR: El Precio de venta no puede ser menor al precio de adquisicion";}
+				if (art_precio_ven < art_precio_adq) {cerr <<"ERROR: El Precio de venta no puede ser menor al precio de adquisicion\n";}
 				
 			} while(art_precio_ven < art_precio_adq); 
 			
@@ -167,9 +167,9 @@ class v_articulo
 				
 				cout << "Introduzca el porcentaje inferior: ";
 				cin >> this->art_porc_inf;
-				if (this->art_porc_inf > 0.10) {cerr <<"ERROR: El Porcentaje inferior debe ser menor al 10%";}
+				if (this->art_porc_inf > 0.10 && this->art_porc_inf < 0.1) {cerr <<"ERROR: El Porcentaje inferior debe ser menor al 10%\n";}
 				
-			} while(this->art_porc_inf > 0.10); 
+			} while(this->art_porc_inf > 0.15 && this->art_porc_inf < 0.1); 
 			
 			
 			
@@ -177,9 +177,9 @@ class v_articulo
 				
 				cout << "Introduzca el porcentaje superior: ";
 				cin >> this->art_porc_sup;
-				if (this->art_porc_sup > 0.15) {cerr <<"ERROR: El Porcentaje superior debe ser menor al 15%";}
+				if (this->art_porc_sup > 0.15 && this->art_porc_sup < 0.1) {cerr <<"ERROR: El Porcentaje superior debe ser menor al 15%\n";}
 				
-			} while(this->art_porc_sup > 0.15); 
+			} while(this->art_porc_sup > 0.15 && this->art_porc_sup < 0.1); 
 			
 			
 			do {
