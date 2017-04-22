@@ -85,6 +85,5 @@ string select(string filepath, string id)
 	return data; //retorna el string
 }
 
-
 #endif
 
