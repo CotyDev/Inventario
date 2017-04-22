@@ -21,7 +21,7 @@ class data_lista_precios{
 	
 	public:
 		
-		data_lista_precios (string list_id,
+	data_lista_precios (string list_id,
 	string list_desc,
 	int list_moneda){
 		

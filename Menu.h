@@ -5,6 +5,7 @@
 #include "v_unidades.h"
 #include "conteo_fisico.h"
 #include "conteo_detalle.h"
+#include "v_lista_precios.h"
 
 #ifndef MENU_H
 #define MENU_H
@@ -22,7 +23,7 @@ void menu(){
 	v_categoria cat;
 	v_unidades uni;
 	v_lista_precios lpre;
-	conteo_fisico conf;
+	//data_conteo_fisico conf;
 
 int opc = 0;
 
@@ -90,7 +91,7 @@ while (opc != 99) {
 			break;
 		case 31:
 			system("cls");
-			cout << "\n" << p_uni.s_plan_unidad();
+			cout << "\n" << p_unid.s_plan_unidad();
 			system("pause");
 			
 			
@@ -127,7 +128,7 @@ while (opc != 99) {
 			break;
 		case 61:
 			system("cls");
-			cout << "\n" << conf.s_conteo_fisico();
+			//cout << "\n" << conf.s_conteo_fisico();
 			system("pause");
 			break;
 		case 62:

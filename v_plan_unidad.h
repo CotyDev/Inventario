@@ -2,7 +2,7 @@
 
 
 #ifndef V_PLAN_UNIDAD_H
-#define V_PLNA_UNIDAD_H 1
+#define V_PLAN_UNIDAD_H 1
 
 using namespace std;
 
@@ -24,8 +24,8 @@ class v_plan_unidad
 				cin >> this->plan_id;
 				
 				if(this->plan_id.length() != 5) {cerr << "ERROR: La longitud del codigo debe ser igual a 5 \n";}
-				
-			}while(this->plan_id.length() != 5);
+				if (select(uplan,this->plan_id) != "Error") {cerr <<"ERROR: Este plan ya existe. \n";}
+			}while(this->plan_id.length() != 5 || select(uplan,this->plan_id) != "Error");
 			
 			do
 			{
@@ -62,9 +62,9 @@ class v_plan_unidad
 		}
 		
 		
-		string s_plan_unidad()
+	string s_plan_unidad()
 	{
-			string id;
+		string id;
 		cout << "Ingrese el codigo: ";
 		cin >> id;
 		string s;

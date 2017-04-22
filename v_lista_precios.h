@@ -13,7 +13,7 @@ class v_lista_precios{
 	string list_desc;
 	string list_moneda;
 	
-	v_lista_precios(){}
+	v_lista_precios() {} //Constructor . . .
 	
 	int i_lista_precios(){
 		
@@ -23,8 +23,8 @@ class v_lista_precios{
 				cin >> this->list_id;
 				
 				if(this->list_id.length() != 5) {cerr << "ERROR: La longitud del codigo debe ser igual a 5 \n";}
-				
-			}while(this->list_id.length() != 5);
+				if (select(ulista_precios, this->list_id) != "Error") {cerr << "ERROR: Lista ya existe. \n";}
+			}while(this->list_id.length() != 5 || select(ulista_precios, this->list_id) != "Error");
 			
 			
 			do{
@@ -36,16 +36,16 @@ class v_lista_precios{
 		do{
 				cout << "Moneda:";
 				cin >> this->list_moneda;
-				if (this->list_moneda() > 20) {cerr << "ERROR: el tipo de moneda debe tener una longitud menor o igual a 20";}
-			}while(this->list_moneda() > 20);
+				if (this->list_moneda.length() > 20) {cerr << "ERROR: el tipo de moneda debe tener una longitud menor o igual a 20";}
+			}while(this->list_moneda.length() > 20);
 		
 		
 	}
 	
 	
-		string s_lista_precio()
+	string s_lista_precio()
 	{
-			string id;
+		string id;
 		cout << "Ingrese el codigo: ";
 		cin >> id;
 		string s;

@@ -10,6 +10,11 @@
 
 using namespace std;
 
+const string uni_aux = "BD/unidades_auxiliar.txt";
+const string plan_aux = "BD/plan_auxiliar.txt";
+const string cat_aux = "BD/categoria_auxiliar.txt";
+const string prov_aux = "BD/proveedores_axiliar.txt";
+
 class v_articulo 
 {
 	private:
@@ -43,9 +48,10 @@ class v_articulo
 			do{
 				cout << "Codigo:";
 				cin >> this->art_id;
-				if (this->art_id.length() != 5) {cerr << "ERROR: El codigo debe ser de 5 digitos.";}
+				if (this->art_id.length() != 5) {cerr << "ERROR: El codigo debe ser de 5 digitos.\n";}
+				if (select(uarticulo,this->art_id) != "Error") {cerr<<"ERROR: Articulo ya existe. \n";}
 			
-			}while(this->art_id.length() != 5);
+			}while(this->art_id.length() != 5 || select(uarticulo,this->art_id) != "Error");
 			
 			do{
 				cout << "Descripcion:";

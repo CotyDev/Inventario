@@ -28,8 +28,9 @@ class v_proveedores
 			do{
 				cout << "Codigo:" ;
 				cin >> this->prov_id;
-				if(this->prov_id.length() !=5) {cerr << "ERROR: El codigo debe ser de 5 digitos. \n";}
-			}while(this->prov_id.length() !=5);
+				if (this->prov_id.length() !=5) {cerr << "ERROR: El codigo debe ser de 5 digitos. \n";}
+				if (select(uproveedores,this->prov_id) != "Error") {cerr << "ERROR: El proveedor ya esta registrado.\n";}
+			}while(this->prov_id.length() !=5 || select(uproveedores,this->prov_id) != "Error");
 			
 			
 			do{

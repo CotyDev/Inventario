@@ -26,7 +26,8 @@ class data_conteo_fisico{
 	
 	public:
 	
-	 data_conteo_fisico (string con_id,			
+	data_conteo_fisico 
+	(string con_id,			
 	string con_fecha,
 	string con_total_bruto,
 	string con_valor)

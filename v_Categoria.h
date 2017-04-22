@@ -23,8 +23,8 @@ class v_categoria
 				cout << "Codigo: ";
 				cin >> this->cat_id;
 				if (this->cat_id.length() != 5) {cerr << "ERROR: El codigo debe ser de longitud 5 \n";}		
-				
-			}while( this->cat_id.length() != 5 );
+				if (select(ucategoria,this->cat_id)  != "Error") {cerr << "ERROR: Categoria ya existe\n";}
+			}while( this->cat_id.length() != 5 || select(ucategoria, this->cat_id) != "Error");
 			
 			do
 			{

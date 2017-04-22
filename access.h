@@ -66,6 +66,8 @@ string select(string filepath, string id)
 	char* s = (char*)malloc(sizeof(char)*128); //retenedor de informacion...
 	string data; //string que va a almacenar la linea de salida. 
 	
+	int sts = 0; // status: 1 -> encontro, 0 -> no encontro
+	
 	while(file.good()) //corre mientras el canal tenga informacion...
 	{
 		file >> data;
@@ -73,15 +75,22 @@ string select(string filepath, string id)
 		
 		if (data == id) //pregunta si la linea actual contiene el id buscado....
 		{	
-			data = data + s; //concatena el id con el resto de la linea
+			data = data + s; //concatena el id con el resto de la linea...
+			sts = 1;
 			break; //sale del ciclo...
 		}
 		
 		
 	}
+
+	
 	free(s); //limpia la memoria del retenedor...
 	file.close(); //cierra el archivo...
-	
+		
+	if (sts == 0) //Si no encontro nada devuelve el string Error
+	{
+		data = "Error";
+	}
 	return data; //retorna el string
 }
 

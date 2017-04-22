@@ -34,8 +34,9 @@ class v_unidades{
 				cout << "Codigo:";
 				cin >> this->uni_id;
 				if (this->uni_id.length() != 5) {cerr << "ERROR: El codigo debe ser de 5 digitos. \n";}
+				if (select(uunidades,this->uni_id) != "Error") {cerr << "ERROR: Unidad ya existe. \n";}
 				
-					}while(this->uni_id.length() != 5);
+			}while(this->uni_id.length() != 5 || select(uunidades,this->uni_id) != "Error");
 					
 					
 					do{
