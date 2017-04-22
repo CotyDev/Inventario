@@ -1,0 +1,2 @@
+A0001	Soda                	                    	Categoria1          	probando            	                    	11.09.2017 	98	99	0.16	109	20	
+E0001	Mochila             	                    	Categoria1          	probando            	                    	20.20.2020 	10	10	0	0	10	
