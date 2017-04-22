@@ -78,6 +78,11 @@ class v_articulo
 					this->uni_id = obtener(uni_aux, opc);
 					control = 1;
 				}
+				else 
+				{
+					cerr << "ERROR: Elija una opcion valida \n";
+					control = 0;
+				}
 				
 				
 			
@@ -93,6 +98,11 @@ class v_articulo
 				{
 					this->prov_id = obtener(prov_aux, opc);
 					control = 1;
+				}
+				else 
+				{
+					cerr << "ERROR: Elija una opcion valida \n";
+					control = 0;
 				}
 				
 				
@@ -110,6 +120,11 @@ class v_articulo
 					this->cat_id = obtener(cat_aux, opc);
 					control = 1;
 				}
+				else 
+				{
+					cerr << "ERROR: Elija una opcion valida \n";
+					control = 0;
+				}
 				
 				
 			
@@ -125,6 +140,11 @@ class v_articulo
 				{
 					this->prov_id = obtener(plan_aux, opc);
 					control = 1;
+				}
+				else 
+				{
+					cerr << "ERROR: Elija una opcion valida \n";
+					control = 0;
 				}
 				
 				

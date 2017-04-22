@@ -29,7 +29,7 @@ IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=0
 CompilerSettings=0000000000000000001000000
-UnitCount=17
+UnitCount=18
 
 [VersionInfo]
 Major=1
@@ -324,6 +324,15 @@ CompileCpp=1
 Folder=Capa Validaciones
 Compile=1
 Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit18]
+FileName=BD\articulo.txt
+Folder=BD
+Compile=0
+Link=0
 Priority=1000
 OverrideBuildCmd=0
 BuildCmd=

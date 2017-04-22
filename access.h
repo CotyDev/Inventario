@@ -104,9 +104,10 @@ int mostrar(string filepath)
 	if(file.bad())
 	{
 		cerr << "ERROR: Problemas abriendo el arhivo";
+		return 99;
 	}
 	
-	while (!file.eof()) 
+	while (!file.eof() && file.good()) 
 	{
 		getline(file,data);
 		cout << i << ". " << data << "\n";
