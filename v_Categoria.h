@@ -39,6 +39,18 @@ class v_categoria
 			return 1;
 		}
 		
+		
+		string s_categoria()
+	{
+			string id;
+		cout << "Ingrese el codigo: ";
+		cin >> id;
+		string s;
+		s = select(ucategoria,id);
+		return s;
+	}
+		
+		
 };
 
 #endif

@@ -49,6 +49,13 @@ class data_conteo_fisico{
  	insert(uconteo_fisico,registro);
  	
  }
+ 
+ 
+ string s_conteo_fisico()
+		{
+			string s;
+			s = select(uconteo_fisico,this->con_id);
+		}
 
 
 	

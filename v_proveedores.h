@@ -67,10 +67,14 @@ class v_proveedores
 			return 1;
 		}
 		
-	string s_proveedores(string id)
+	string s_proveedores()
 	{
+			string id;
+		cout << "Ingrese el codigo: ";
+		cin >> id;
 		string s;
 		s = select(uproveedores,id);
+		return s;
 	}
 	
 };

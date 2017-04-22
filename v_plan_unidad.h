@@ -60,6 +60,22 @@ class v_plan_unidad
 			
 			
 		}
+		
+		
+		string s_plan_unidad()
+	{
+			string id;
+		cout << "Ingrese el codigo: ";
+		cin >> id;
+		string s;
+		s = select(uplan,id);
+		return s;
+	}
+		
+		
+		
+		
+		
 
 };
 #endif

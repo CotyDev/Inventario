@@ -30,9 +30,9 @@ class v_articulo
 	
 	
 	
-		v_articulo(string art_id) 
+		v_articulo() 
 		{ 
-			this->art_id = art_id; /*nothing here...*/
+		 /*nothing here...*/
 		} //Constructor
 	
 	
@@ -129,8 +129,11 @@ class v_articulo
 			return 1;
 		}
 		
-	string s_articulo(string id)
+	string s_articulo()
 	{
+		string id;
+		cout << "Ingrese el codigo: ";
+		cin >> id;
 		string s; //string que se piensa retornar
 		s  = select(uarticulo, id); //se utiliza la funcion de access.h select para buscar el registro.
 		

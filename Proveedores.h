@@ -71,6 +71,8 @@ class data_proveedores{
 		
 		string s_proveedores()
 		{
+			
+			
 			string s;
 			s = select(uproveedores,this->prov_id);
 			return s;

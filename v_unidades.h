@@ -60,7 +60,12 @@ class v_unidades{
 		
 		
 		
-			string s_unidades(string id){
+			string s_unidades()
+			
+			{
+			string id;
+			cout << "Ingrese el codigo: ";
+			cin >> id;	
 			
 	
 		string s; //string que se piensa retornar
