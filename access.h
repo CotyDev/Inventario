@@ -155,5 +155,38 @@ string obtener(string filepath, int l)
 	
 	return data;
 }
+
+string mulstr(string cadena, int n) 
+{
+	string cad = cadena;
+	for (int i = 1; i < n; i ++) 
+	{
+		cad += cadena;
+	}
+	
+	return cad;
+}
+
+void reporte(string filepath)
+{
+	ifstream file(filepath.c_str());//Abriendo para lectura...
+	string data;
+	
+	if(file.bad())
+	{
+		cerr << "ERROR: Problemas abriendo el arhivo";
+	}
+	
+	while (!file.eof() && file.good()) 
+	{
+		getline(file,data);
+		if (data != "") 
+		{
+			cout << data << "\n";
+		}
+	}
+	
+	file.close();
+}
 #endif
 

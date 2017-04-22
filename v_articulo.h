@@ -204,8 +204,9 @@ class v_articulo
 		
 		return s; //se retorna el registro...
 		
-	}	
-		
+	}
+	
+
 		
 };
 

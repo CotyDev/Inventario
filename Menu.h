@@ -55,10 +55,7 @@ while (opc != 99) {
 	<<"52 Insertar\n\t"
 	
 	<<"Reportes\n\t"
-	<<"61 Reporte de conteo fisico\n\t"
-	<<"62 Reporte de variacion de existencias\n\t"
-	<<"63 Reporte de ajuste de inventario\n\t"
-	<<"64 Lista de Listas de precios\n\n"
+	<<"61 Lista de Articulos\n\n"
 	<<"99 SALIR\n\n\n";
 
 	cout << "Elija una opcion: ";
@@ -130,29 +127,14 @@ while (opc != 99) {
 			break;
 		case 61:
 			system("cls");
-			//cout << "\n" << conf.s_conteo_fisico();
+			cout << "ID   \t" << "Descripcion" << mulstr(" ", 9) << "\tUnidad" << mulstr(" ",14) << "\tCategoria" << mulstr(" ", 11) << "\tProveedor" 
+			<< mulstr(" ",11) << "\tPlan"<<mulstr(" ",16)<<"\tFecha de creacion   \t"<< "\n";			
+			reporte(uarticulo);
 			system("pause");
 			break;
-		case 62:
-			system("cls");
-			cout << "\n";
-			system("pause");
-			break;
-		case 63:
-			system("cls");
-			cout << "\n";
-			system("pause");
-			break;
-		case 64:
-			system("cls");
-			cout << mostrar(ulista_precios);
-			system("pause");
-			break;
+
 		case 99:
-			
-			cout << "salio";
-			system("pause");
-			
+			break;
 		default:
 			cerr << "Elija una opcion valida";
 			break;

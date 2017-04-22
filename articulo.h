@@ -94,8 +94,8 @@ class data_articulo
 				
 				//Crea una cadena con los datos organizados para ser guardados en el archivo...
 				
-				string registro = this->art_id + "\t" + this->art_desc + "\t" + this->uni_id + "\t" + this->cat_id + 
-				"\t" + this->prov_id +"\t"+ this->plan_id + "\t" + this->art_fecha_creacion + "\t"  + nums[0] +"\t"+ 
+				string registro = this->art_id + "\t" + this->art_desc + mulstr(" ",20-this->art_desc.length()) + "\t" + this->uni_id + mulstr(" ",20-this->uni_id.length()) + "\t" + this->cat_id + 
+				mulstr(" ", 20-this->cat_id.length())+"\t" + this->prov_id +mulstr(" ", 20-this->prov_id.length()) +"\t"+ this->plan_id + mulstr(" ", 20-this->plan_id.length()) + "\t" + this->art_fecha_creacion + mulstr(" ", 10-this->art_fecha_creacion.length()) + "\t"  + nums[0] +"\t"+ 
 				nums[1] +"\t"+ nums[2] +"\t"+ nums[3] + "\t" + nums[4] + "\t" + "\n"  ;
 				
 				//inserta los registros en el archivo de articulo.txt
